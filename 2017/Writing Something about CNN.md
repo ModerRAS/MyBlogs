@@ -24,4 +24,4 @@ The last is output layer. It just output the data from classifier.
 Others are BP or SGD. Maybe I will talk it later.
 
 The last, showing a LeNet-5.
-![]()
+![](https://raw.githubusercontent.com/ModerRAS/MyBlogs/master/img/LeNet-5.png)
