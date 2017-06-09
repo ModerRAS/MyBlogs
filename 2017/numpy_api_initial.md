@@ -124,6 +124,88 @@ array([[[ 1.,  1.],
        [[ 1.,  1.],
         [ 1.,  1.]]])
 ```
+
+## numpy.zeros_like
+
+```
+zeros_like(a, dtype=None, order='K', subok=True)
+```
+I think what its doc said is very good .It's :
+> Return an array of zeros with the same shape and type as a given array.
+
+a is a numpy.ndarray object
+
+dtype is its type.
+
+order is the same as that in the functions before. Something about the C or Fortran.
+
+subok I don't know what it is. I try both True and False. But I didn't find the difference.
+
+Example :
+
+```
+In [2]: a = numpy.array([[1,2,3,4,5],[2,3,4,5,6],[3,4,5,6,7]])
+
+In [3]: numpy.zeros_like(a)
+Out[3]:
+array([[0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0]])
+```
+
+## numpy.ones_like
+
+```
+ones_like(a, dtype=None, order='K', subok=True)
+```
+
+The same as zeros_like, but its output is one.
+
+Examples :
+```
+In [2]: a = numpy.array([[1,2,3,4,5],[2,3,4,5,6],[3,4,5,6,7]])
+
+In [3]: numpy.ones_like(a)
+Out[3]:
+array([[1, 1, 1, 1, 1],
+       [1, 1, 1, 1, 1],
+       [1, 1, 1, 1, 1]])
+```
+
+## numpy.eye
+
+```
+eye(N, M=None, k=0, dtype=float)
+```
+
+This function can create likes Unit matrix.
+
+Example :
+```
+In [5]: numpy.eye(5)
+Out[5]:
+array([[ 1.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.],
+       [ 0.,  0.,  1.,  0.,  0.],
+       [ 0.,  0.,  0.,  1.,  0.],
+       [ 0.,  0.,  0.,  0.,  1.]])
+
+In [6]: numpy.eye(5,M=3)
+Out[6]:
+array([[ 1.,  0.,  0.],
+       [ 0.,  1.,  0.],
+       [ 0.,  0.,  1.],
+       [ 0.,  0.,  0.],
+       [ 0.,  0.,  0.]])
+
+In [7]: numpy.eye(5,M=3,k=1)
+Out[7]:
+array([[ 0.,  1.,  0.],
+       [ 0.,  0.,  1.],
+       [ 0.,  0.,  0.],
+       [ 0.,  0.,  0.],
+       [ 0.,  0.,  0.]])
+```
 ---
 # This is numpy's Python doc
 ## numpy.array
@@ -363,3 +445,112 @@ Return a new array of given shape and type, filled with ones.
     >>> np.ones(s)
     array([[ 1.,  1.],
            [ 1.,  1.]])
+## numpy.zeros_like
+
+Return an array of zeros with the same shape and type as a given array.
+
+    Parameters
+    ----------
+    a : array_like
+        The shape and data-type of `a` define these same attributes of
+        the returned array.
+    dtype : data-type, optional
+        Overrides the data type of the result.
+
+        .. versionadded:: 1.6.0
+    order : {'C', 'F', 'A', or 'K'}, optional
+        Overrides the memory layout of the result. 'C' means C-order,
+        'F' means F-order, 'A' means 'F' if `a` is Fortran contiguous,
+        'C' otherwise. 'K' means match the layout of `a` as closely
+        as possible.
+
+        .. versionadded:: 1.6.0
+    subok : bool, optional.
+        If True, then the newly created array will use the sub-class
+        type of 'a', otherwise it will be a base-class array. Defaults
+        to True.
+
+    Returns
+    -------
+    out : ndarray
+        Array of zeros with the same shape and type as `a`.
+
+    See Also
+    --------
+    ones_like : Return an array of ones with shape and type of input.
+    empty_like : Return an empty array with shape and type of input.
+    zeros : Return a new array setting values to zero.
+    ones : Return a new array setting values to one.
+    empty : Return a new uninitialized array.
+
+    Examples
+    --------
+    >>> x = np.arange(6)
+    >>> x = x.reshape((2, 3))
+    >>> x
+    array([[0, 1, 2],
+           [3, 4, 5]])
+    >>> np.zeros_like(x)
+    array([[0, 0, 0],
+           [0, 0, 0]])
+
+    >>> y = np.arange(3, dtype=np.float)
+    >>> y
+    array([ 0.,  1.,  2.])
+    >>> np.zeros_like(y)
+    array([ 0.,  0.,  0.])
+
+## numpy.ones_like
+
+Return an array of ones with the same shape and type as a given array.
+
+    Parameters
+    ----------
+    a : array_like
+        The shape and data-type of `a` define these same attributes of
+        the returned array.
+    dtype : data-type, optional
+        Overrides the data type of the result.
+
+        .. versionadded:: 1.6.0
+    order : {'C', 'F', 'A', or 'K'}, optional
+        Overrides the memory layout of the result. 'C' means C-order,
+        'F' means F-order, 'A' means 'F' if `a` is Fortran contiguous,
+        'C' otherwise. 'K' means match the layout of `a` as closely
+        as possible.
+
+        .. versionadded:: 1.6.0
+    subok : bool, optional.
+        If True, then the newly created array will use the sub-class
+        type of 'a', otherwise it will be a base-class array. Defaults
+        to True.
+
+    Returns
+    -------
+    out : ndarray
+        Array of ones with the same shape and type as `a`.
+
+    See Also
+    --------
+    zeros_like : Return an array of zeros with shape and type of input.
+    empty_like : Return an empty array with shape and type of input.
+    zeros : Return a new array setting values to zero.
+    ones : Return a new array setting values to one.
+    empty : Return a new uninitialized array.
+
+    Examples
+    --------
+    >>> x = np.arange(6)
+    >>> x = x.reshape((2, 3))
+    >>> x
+    array([[0, 1, 2],
+           [3, 4, 5]])
+    >>> np.ones_like(x)
+    array([[1, 1, 1],
+           [1, 1, 1]])
+
+    >>> y = np.arange(3, dtype=np.float)
+    >>> y
+    array([ 0.,  1.,  2.])
+    >>> np.ones_like(y)
+    array([ 1.,  1.,  1.])
