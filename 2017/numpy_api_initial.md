@@ -1,4 +1,4 @@
-# Write First
+# Writing At First
 
 This note I will say something about numpy. And what I will say is most about initial function like some functions that create some objects.
 
@@ -54,6 +54,76 @@ In [10]: numpy.arange(1,10,2)
 Out[10]: array([1, 3, 5, 7, 9])
 ```
 
+## numpy.zeros
+
+```
+zeros(shape, dtype=None, order='C')
+```
+Shape is the shape , likes (1,2) and it will create a matrix of one line two column. Also you can create a three dimensions tensor or others.
+
+dtype is its type.
+
+order is how to save in the memory. We don't need to care.
+
+Example :
+```
+In [12]: numpy.zeros((2,2,2))
+Out[12]:
+array([[[ 0.,  0.],
+        [ 0.,  0.]],
+
+       [[ 0.,  0.],
+        [ 0.,  0.]]])
+
+In [13]: numpy.zeros((2,2))
+Out[13]:
+array([[ 0.,  0.],
+       [ 0.,  0.]])
+
+
+In [14]: numpy.zeros((2,2,2,2))
+Out[14]:
+array([[[[ 0.,  0.],
+         [ 0.,  0.]],
+
+        [[ 0.,  0.],
+         [ 0.,  0.]]],
+
+
+       [[[ 0.,  0.],
+         [ 0.,  0.]],
+
+        [[ 0.,  0.],
+         [ 0.,  0.]]]])
+```
+
+## numpy.ones
+
+```
+ones(shape, dtype=None, order='C')
+```
+
+The same as numpy.zeros. But the output is some one rather than zero.
+
+Example :
+```
+In [2]: numpy.ones(5)
+Out[2]: array([ 1.,  1.,  1.,  1.,  1.])
+
+In [3]: numpy.ones((2,2))
+Out[3]:
+array([[ 1.,  1.],
+       [ 1.,  1.]])
+
+
+In [4]: np.ones((2,2,2))
+Out[4]:
+array([[[ 1.,  1.],
+        [ 1.,  1.]],
+
+       [[ 1.,  1.],
+        [ 1.,  1.]]])
+```
 ---
 # This is numpy's Python doc
 ## numpy.array
@@ -201,3 +271,95 @@ arange([start,] stop[, step,], dtype=None)
         array([3, 4, 5, 6])
         >>> np.arange(3,7,2)
         array([3, 5])
+
+
+## numpy.zeros
+zeros(shape, dtype=float, order='C')
+
+        Return a new array of given shape and type, filled with zeros.
+
+        Parameters
+        ----------
+        shape : int or sequence of ints
+            Shape of the new array, e.g., ``(2, 3)`` or ``2``.
+        dtype : data-type, optional
+            The desired data-type for the array, e.g., `numpy.int8`.  Default is
+            `numpy.float64`.
+        order : {'C', 'F'}, optional
+            Whether to store multidimensional data in C- or Fortran-contiguous
+            (row- or column-wise) order in memory.
+
+        Returns
+        -------
+        out : ndarray
+            Array of zeros with the given shape, dtype, and order.
+
+        See Also
+        --------
+        zeros_like : Return an array of zeros with shape and type of input.
+        ones_like : Return an array of ones with shape and type of input.
+        empty_like : Return an empty array with shape and type of input.
+        ones : Return a new array setting values to one.
+        empty : Return a new uninitialized array.
+
+        Examples
+        --------
+        >>> np.zeros(5)
+        array([ 0.,  0.,  0.,  0.,  0.])
+
+        >>> np.zeros((5,), dtype=np.int)
+        array([0, 0, 0, 0, 0])
+
+        >>> np.zeros((2, 1))
+        array([[ 0.],
+               [ 0.]])
+
+        >>> s = (2,2)
+        >>> np.zeros(s)
+        array([[ 0.,  0.],
+               [ 0.,  0.]])
+
+        >>> np.zeros((2,), dtype=[('x', 'i4'), ('y', 'i4')]) # custom dtype
+        array([(0, 0), (0, 0)],
+              dtype=[('x', '<i4'), ('y', '<i4')])
+
+
+## numpy.ones
+Return a new array of given shape and type, filled with ones.
+
+    Parameters
+    ----------
+    shape : int or sequence of ints
+        Shape of the new array, e.g., ``(2, 3)`` or ``2``.
+    dtype : data-type, optional
+        The desired data-type for the array, e.g., `numpy.int8`.  Default is
+        `numpy.float64`.
+    order : {'C', 'F'}, optional
+        Whether to store multidimensional data in C- or Fortran-contiguous
+        (row- or column-wise) order in memory.
+
+    Returns
+    -------
+    out : ndarray
+        Array of ones with the given shape, dtype, and order.
+
+    See Also
+    --------
+    zeros, ones_like
+
+    Examples
+    --------
+    >>> np.ones(5)
+    array([ 1.,  1.,  1.,  1.,  1.])
+
+    >>> np.ones((5,), dtype=np.int)
+    array([1, 1, 1, 1, 1])
+
+    >>> np.ones((2, 1))
+    array([[ 1.],
+           [ 1.]])
+
+    >>> s = (2,2)
+    >>> np.ones(s)
+    array([[ 1.,  1.],
+           [ 1.,  1.]])
