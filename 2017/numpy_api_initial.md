@@ -1,3 +1,9 @@
+# Write First
+
+This note I will say something about numpy. And what I will say is most about initial function like some functions that create some objects.
+
+----
+# Then I will say what I think
 ## numpy.array
 
 
@@ -12,11 +18,46 @@ copy I don't know. I never use this parameter in this function. Also others para
 
 And It's output is a numpy.ndarray object. And it saves the array we uesd.
 
+Example :
+```
+In [6]: numpy.array([1,2,3])
+Out[6]: array([1, 2, 3])
+```
+And its type is int32.
+
 ## numpy.arange
 
+```
+arange([start,] stop[, step,], dtype=None)
+```
+And it's function defined like this:
+```
+arange(start=None, stop=None, step=None, dtype=None)
+```
 
+This function likes range or xrange. In order to create a new array likes `[1,2,3,4,5]`.
 
+start is the array's first number.
+stop is the array's length.
+step is how long will the nearly number be.
+dtype is its type.
 
+Example :
+```
+In [8]: numpy.arange(5)
+Out[8]: array([0, 1, 2, 3, 4])
+
+In [9]: numpy.arange(1,5)
+Out[9]: array([1, 2, 3, 4])
+
+In [10]: numpy.arange(1,10,2)
+Out[10]: array([1, 3, 5, 7, 9])
+```
+
+---
+# This is numpy's Python doc
+## numpy.array
+array(object, dtype=None, copy=True, order=None, subok=False, ndmin=0)
         Create an array.
 
         Parameters
@@ -102,3 +143,61 @@ And It's output is a numpy.ndarray object. And it saves the array we uesd.
         >>> np.array(np.mat('1 2; 3 4'), subok=True)
         matrix([[1, 2],
                 [3, 4]])
+
+## numpy.arange
+arange([start,] stop[, step,], dtype=None)
+
+        Return evenly spaced values within a given interval.
+
+        Values are generated within the half-open interval ``[start, stop)``
+        (in other words, the interval including `start` but excluding `stop`).
+        For integer arguments the function is equivalent to the Python built-in
+        `range <http://docs.python.org/lib/built-in-funcs.html>`_ function,
+        but returns an ndarray rather than a list.
+
+        When using a non-integer step, such as 0.1, the results will often not
+        be consistent.  It is better to use ``linspace`` for these cases.
+
+        Parameters
+        ----------
+        start : number, optional
+            Start of interval.  The interval includes this value.  The default
+            start value is 0.
+        stop : number
+            End of interval.  The interval does not include this value, except
+            in some cases where `step` is not an integer and floating point
+            round-off affects the length of `out`.
+        step : number, optional
+            Spacing between values.  For any output `out`, this is the distance
+            between two adjacent values, ``out[i+1] - out[i]``.  The default
+            step size is 1.  If `step` is specified, `start` must also be given.
+        dtype : dtype
+            The type of the output array.  If `dtype` is not given, infer the data
+            type from the other input arguments.
+
+        Returns
+        -------
+        arange : ndarray
+            Array of evenly spaced values.
+
+            For floating point arguments, the length of the result is
+            ``ceil((stop - start)/step)``.  Because of floating point overflow,
+            this rule may result in the last element of `out` being greater
+            than `stop`.
+
+        See Also
+        --------
+        linspace : Evenly spaced numbers with careful handling of endpoints.
+        ogrid: Arrays of evenly spaced numbers in N-dimensions.
+        mgrid: Grid-shaped arrays of evenly spaced numbers in N-dimensions.
+
+        Examples
+        --------
+        >>> np.arange(3)
+        array([0, 1, 2])
+        >>> np.arange(3.0)
+        array([ 0.,  1.,  2.])
+        >>> np.arange(3,7)
+        array([3, 4, 5, 6])
+        >>> np.arange(3,7,2)
+        array([3, 5])
