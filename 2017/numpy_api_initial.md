@@ -206,6 +206,21 @@ array([[ 0.,  1.,  0.],
        [ 0.,  0.,  0.],
        [ 0.,  0.,  0.]])
 ```
+
+## Some others
+There also have functions likes numpy.empty and numpy.empty_like. They likes numpy.ones and ones_like or others. But they return an uninitialized (arbitrary) data
+
+```
+In [8]: numpy.empty(5)
+Out[8]: array([ 1.,  1.,  1.,  1.,  1.])
+
+In [9]: numpy.empty_like(a)
+Out[9]:
+array([[0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0]])
+```
+
 ---
 # This is numpy's Python doc
 ## numpy.array
@@ -554,3 +569,144 @@ Return an array of ones with the same shape and type as a given array.
     array([ 0.,  1.,  2.])
     >>> np.ones_like(y)
     array([ 1.,  1.,  1.])
+
+## numpy.eye
+
+Return a 2-D array with ones on the diagonal and zeros elsewhere.
+
+    Parameters
+    ----------
+    N : int
+      Number of rows in the output.
+    M : int, optional
+      Number of columns in the output. If None, defaults to `N`.
+    k : int, optional
+      Index of the diagonal: 0 (the default) refers to the main diagonal,
+      a positive value refers to an upper diagonal, and a negative value
+      to a lower diagonal.
+    dtype : data-type, optional
+      Data-type of the returned array.
+
+    Returns
+    -------
+    I : ndarray of shape (N,M)
+      An array where all elements are equal to zero, except for the `k`-th
+      diagonal, whose values are equal to one.
+
+    See Also
+    --------
+    identity : (almost) equivalent function
+    diag : diagonal 2-D array from a 1-D array specified by the user.
+
+    Examples
+    --------
+    >>> np.eye(2, dtype=int)
+    array([[1, 0],
+           [0, 1]])
+    >>> np.eye(3, k=1)
+    array([[ 0.,  1.,  0.],
+           [ 0.,  0.,  1.],
+           [ 0.,  0.,  0.]])
+
+## numpy.empty
+
+empty(shape, dtype=float, order='C')
+
+        Return a new array of given shape and type, without initializing entries.
+
+        Parameters
+        ----------
+        shape : int or tuple of int
+            Shape of the empty array
+        dtype : data-type, optional
+            Desired output data-type.
+        order : {'C', 'F'}, optional
+            Whether to store multi-dimensional data in row-major
+            (C-style) or column-major (Fortran-style) order in
+            memory.
+
+        Returns
+        -------
+        out : ndarray
+            Array of uninitialized (arbitrary) data of the given shape, dtype, and
+            order.  Object arrays will be initialized to None.
+
+        See Also
+        --------
+        empty_like, zeros, ones
+
+        Notes
+        -----
+        `empty`, unlike `zeros`, does not set the array values to zero,
+        and may therefore be marginally faster.  On the other hand, it requires
+        the user to manually set all the values in the array, and should be
+        used with caution.
+
+        Examples
+        --------
+        >>> np.empty([2, 2])
+        array([[ -9.74499359e+001,   6.69583040e-309],
+               [  2.13182611e-314,   3.06959433e-309]])         #random
+
+        >>> np.empty([2, 2], dtype=int)
+        array([[-1073741821, -1067949133],
+               [  496041986,    19249760]])      
+
+
+## numpy.empty_like
+
+empty_like(a, dtype=None, order='K', subok=True)
+
+        Return a new array with the same shape and type as a given array.
+
+        Parameters
+        ----------
+        a : array_like
+            The shape and data-type of `a` define these same attributes of the
+            returned array.
+        dtype : data-type, optional
+            Overrides the data type of the result.
+
+            .. versionadded:: 1.6.0
+        order : {'C', 'F', 'A', or 'K'}, optional
+            Overrides the memory layout of the result. 'C' means C-order,
+            'F' means F-order, 'A' means 'F' if ``a`` is Fortran contiguous,
+            'C' otherwise. 'K' means match the layout of ``a`` as closely
+            as possible.
+
+            .. versionadded:: 1.6.0
+        subok : bool, optional.
+            If True, then the newly created array will use the sub-class
+            type of 'a', otherwise it will be a base-class array. Defaults
+            to True.
+
+        Returns
+        -------
+        out : ndarray
+            Array of uninitialized (arbitrary) data with the same
+            shape and type as `a`.
+
+        See Also
+        --------
+        ones_like : Return an array of ones with shape and type of input.
+        zeros_like : Return an array of zeros with shape and type of input.
+        empty : Return a new uninitialized array.
+        ones : Return a new array setting values to one.
+        zeros : Return a new array setting values to zero.
+
+        Notes
+        -----
+        This function does *not* initialize the returned array; to do that use
+        `zeros_like` or `ones_like` instead.  It may be marginally faster than
+        the functions that do set the array values.
+
+        Examples
+        --------
+        >>> a = ([1,2,3], [4,5,6])                         # a is array-like
+        >>> np.empty_like(a)
+        array([[-1073741821, -1073741821,           3],    #random
+               [          0,           0, -1073741821]])
+        >>> a = np.array([[1., 2., 3.],[4.,5.,6.]])
+        >>> np.empty_like(a)
+        array([[ -2.00000715e+000,   1.48219694e-323,  -2.00000572e+000],#random
+               [  4.38791518e-305,  -2.00000715e+000,   4.17269252e-309]])
