@@ -24,3 +24,8 @@ requests.delete("http://httpbin.org/delete")
 requests.head("http://httpbin.org/get")
 requests.options("http://httpbin.org/get")
 ```
+### With parameters
+```
+payload = {'key1': 'value1', 'key2': ['value2', 'value3']}
+r = requests.get('http://httpbin.org/get', params=payload)
+```
