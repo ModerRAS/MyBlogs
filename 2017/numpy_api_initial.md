@@ -231,7 +231,7 @@ array(object, dtype=None, copy=True, order=None, subok=False, ndmin=0)
 Create an array.
 
 ### Parameters
-----------
+
 #### object : array_like
 
 An array, any object exposing the array interface, an
@@ -276,61 +276,61 @@ array should have.  Ones will be pre-pended to the shape as
 needed to meet this requirement.
 
 ### Returns
--------
+
 #### out : ndarray
 
 An array object satisfying the specified requirements.
 
 ### See Also
---------
+
 empty, empty_like, zeros, zeros_like, ones, ones_like, fill
 
 ### Examples
---------
+
 ```
->>> np.array([1, 2, 3])
+np.array([1, 2, 3])
 array([1, 2, 3])
 ```
 
 Upcasting:
 
 ```
->>> np.array([1, 2, 3.0])
+np.array([1, 2, 3.0])
 array([ 1.,  2.,  3.])
 ```
 
 More than one dimension:
 ```
->>> np.array([[1, 2], [3, 4]])
+np.array([[1, 2], [3, 4]])
 array([[1, 2],
        [3, 4]])
 ```
 Minimum dimensions 2:
 ```
->>> np.array([1, 2, 3], ndmin=2)
+np.array([1, 2, 3], ndmin=2)
 array([[1, 2, 3]])
 ```
 
 Type provided:
 ```
->>> np.array([1, 2, 3], dtype=complex)
+np.array([1, 2, 3], dtype=complex)
 array([ 1.+0.j,  2.+0.j,  3.+0.j])
 ```
 
 Data-type consisting of more than one element:
 ```
->>> x = np.array([(1,2),(3,4)],dtype=[('a','<i4'),('b','<i4')])
->>> x['a']
+x = np.array([(1,2),(3,4)],dtype=[('a','<i4'),('b','<i4')])
+x['a']
 array([1, 3])
 ```
 
 Creating an array from sub-classes:
 ```
->>> np.array(np.mat('1 2; 3 4'))
+np.array(np.mat('1 2; 3 4'))
 array([[1, 2],
        [3, 4]])
 
->>> np.array(np.mat('1 2; 3 4'), subok=True)
+np.array(np.mat('1 2; 3 4'), subok=True)
 matrix([[1, 2],
         [3, 4]])
 ```
@@ -350,48 +350,47 @@ When using a non-integer step, such as 0.1, the results will often not
 be consistent.  It is better to use ``linspace`` for these cases.
 
 ### Parameters
-----------
+
 #### start : number, optional
-    Start of interval.  The interval includes this value.  The default
-    start value is 0.
+Start of interval.  The interval includes this value.  The default
+start value is 0.
 #### stop : number
-    End of interval.  The interval does not include this value, except
-    in some cases where `step` is not an integer and floating point
-    round-off affects the length of `out`.
+End of interval.  The interval does not include this value, except
+in some cases where `step` is not an integer and floating point
+round-off affects the length of `out`.
 #### step : number, optional
-    Spacing between values.  For any output `out`, this is the distance
-    between two adjacent values, ``out[i+1] - out[i]``.  The default
-    step size is 1.  If `step` is specified, `start` must also be given.
+Spacing between values.  For any output `out`, this is the distance
+between two adjacent values, ``out[i+1] - out[i]``.  The default
+step size is 1.  If `step` is specified, `start` must also be given.
 #### dtype : dtype
-    The type of the output array.  If `dtype` is not given, infer the data
-    type from the other input arguments.
+The type of the output array.  If `dtype` is not given, infer the data
+type from the other input arguments.
 
 ### Returns
--------
-#### arange : ndarray
-    Array of evenly spaced values.
 
-    For floating point arguments, the length of the result is
-    ``ceil((stop - start)/step)``.  Because of floating point overflow,
-    this rule may result in the last element of `out` being greater
-    than `stop`.
+#### arange : ndarray
+Array of evenly spaced values.
+For floating point arguments, the length of the result is
+``ceil((stop - start)/step)``.  Because of floating point overflow,
+this rule may result in the last element of `out` being greater
+than `stop`.
 
 ### See Also
---------
+
 #### linspace : Evenly spaced numbers with careful handling of endpoints.
 #### ogrid: Arrays of evenly spaced numbers in N-dimensions.
 #### mgrid: Grid-shaped arrays of evenly spaced numbers in N-dimensions.
 
 ### Examples
---------
+
 ```
->>> np.arange(3)
+np.arange(3)
 array([0, 1, 2])
->>> np.arange(3.0)
+np.arange(3.0)
 array([ 0.,  1.,  2.])
->>> np.arange(3,7)
+np.arange(3,7)
 array([3, 4, 5, 6])
->>> np.arange(3,7,2)
+np.arange(3,7,2)
 array([3, 5])
 ```
 
@@ -401,7 +400,7 @@ zeros(shape, dtype=float, order='C')
 Return a new array of given shape and type, filled with zeros.
 
 ### Parameters
-----------
+
 #### shape : int or sequence of ints
 
 Shape of the new array, e.g., ``(2, 3)`` or ``2``.
@@ -415,13 +414,13 @@ Whether to store multidimensional data in C- or Fortran-contiguous
 (row- or column-wise) order in memory.
 
 ### Returns
--------
+
 #### out : ndarray
 
 Array of zeros with the given shape, dtype, and order.
 
 ### See Also
---------
+
 #### zeros_like : Return an array of zeros with shape and type of input.
 #### ones_like : Return an array of ones with shape and type of input.
 #### empty_like : Return an empty array with shape and type of input.
@@ -429,24 +428,24 @@ Array of zeros with the given shape, dtype, and order.
 #### empty : Return a new uninitialized array.
 
 ### Examples
---------
+
 ```
->>> np.zeros(5)
+np.zeros(5)
 array([ 0.,  0.,  0.,  0.,  0.])
 
->>> np.zeros((5,), dtype=np.int)
+np.zeros((5,), dtype=np.int)
 array([0, 0, 0, 0, 0])
 
->>> np.zeros((2, 1))
+np.zeros((2, 1))
 array([[ 0.],
              [ 0.]])
 
->>> s = (2,2)
->>> np.zeros(s)
+s = (2,2)
+np.zeros(s)
 array([[ 0.,  0.],
              [ 0.,  0.]])
 
->>> np.zeros((2,), dtype=[('x', 'i4'), ('y', 'i4')]) # custom dtype
+np.zeros((2,), dtype=[('x', 'i4'), ('y', 'i4')]) # custom dtype
 array([(0, 0), (0, 0)],
             dtype=[('x', '<i4'), ('y', '<i4')])
 ```
@@ -455,7 +454,7 @@ array([(0, 0), (0, 0)],
 Return a new array of given shape and type, filled with ones.
 
 ### Parameters
-----------
+
 #### shape : int or sequence of ints
 Shape of the new array, e.g., ``(2, 3)`` or ``2``.
 #### dtype : data-type, optional
@@ -466,24 +465,24 @@ Whether to store multidimensional data in C- or Fortran-contiguous
 (row- or column-wise) order in memory.
 
 ### Returns
--------
+
 #### out : ndarray
 Array of ones with the given shape, dtype, and order.
 ### See Also
---------
+
 zeros, ones_like
 ### Examples
---------
+
 ```
->>> np.ones(5)
+np.ones(5)
 array([ 1.,  1.,  1.,  1.,  1.])
->>> np.ones((5,), dtype=np.int)
+np.ones((5,), dtype=np.int)
 array([1, 1, 1, 1, 1])
->>> np.ones((2, 1))
+np.ones((2, 1))
 array([[ 1.],
        [ 1.]])
->>> s = (2,2)
->>> np.ones(s)
+s = (2,2)
+np.ones(s)
 array([[ 1.,  1.],
        [ 1.,  1.]])
 ```
@@ -492,7 +491,7 @@ array([[ 1.,  1.],
 Return an array of zeros with the same shape and type as a given array.
 
 ### Parameters
-----------
+
 #### a : array_like
 The shape and data-type of `a` define these same attributes of
 the returned array.
@@ -510,31 +509,31 @@ If True, then the newly created array will use the sub-class
 type of 'a', otherwise it will be a base-class array. Defaults
 to True.
 ### Returns
--------
+
 #### out : ndarray
 Array of zeros with the same shape and type as `a`.
 ### See Also
---------
+
 #### ones_like : Return an array of ones with shape and type of input.
 #### empty_like : Return an empty array with shape and type of input.
 #### zeros : Return a new array setting values to zero.
 #### ones : Return a new array setting values to one.
 #### empty : Return a new uninitialized array.
 ### Examples
---------
+
 ```
->>> x = np.arange(6)
->>> x = x.reshape((2, 3))
->>> x
+x = np.arange(6)
+x = x.reshape((2, 3))
+x
 array([[0, 1, 2],
        [3, 4, 5]])
->>> np.zeros_like(x)
+np.zeros_like(x)
 array([[0, 0, 0],
        [0, 0, 0]])
->>> y = np.arange(3, dtype=np.float)
->>> y
+y = np.arange(3, dtype=np.float)
+y
 array([ 0.,  1.,  2.])
->>> np.zeros_like(y)
+np.zeros_like(y)
 array([ 0.,  0.,  0.])
 ```
 ## numpy.ones_like
@@ -542,7 +541,7 @@ array([ 0.,  0.,  0.])
 Return an array of ones with the same shape and type as a given array.
 
 ### Parameters
-----------
+
 #### a : array_like
 The shape and data-type of `a` define these same attributes of
 the returned array.
@@ -560,31 +559,31 @@ If True, then the newly created array will use the sub-class
 type of 'a', otherwise it will be a base-class array. Defaults
 to True.
 ### Returns
--------
+
 #### out : ndarray
 Array of ones with the same shape and type as `a`.
 ### See Also
---------
+
 #### zeros_like : Return an array of zeros with shape and type of input.
 #### empty_like : Return an empty array with shape and type of input.
 #### zeros : Return a new array setting values to zero.
 #### ones : Return a new array setting values to one.
 #### empty : Return a new uninitialized array.
 ### Examples
---------
+
 ```
->>> x = np.arange(6)
->>> x = x.reshape((2, 3))
->>> x
+x = np.arange(6)
+x = x.reshape((2, 3))
+x
 array([[0, 1, 2],
        [3, 4, 5]])
->>> np.ones_like(x)
+np.ones_like(x)
 array([[1, 1, 1],
        [1, 1, 1]])
->>> y = np.arange(3, dtype=np.float)
->>> y
+y = np.arange(3, dtype=np.float)
+y
 array([ 0.,  1.,  2.])
->>> np.ones_like(y)
+np.ones_like(y)
 array([ 1.,  1.,  1.])
 
 ```
@@ -593,7 +592,7 @@ array([ 1.,  1.,  1.])
 Return a 2-D array with ones on the diagonal and zeros elsewhere.
 
 ### Parameters
-----------
+
 #### N : int
 Number of rows in the output.
 #### M : int, optional
@@ -605,21 +604,21 @@ to a lower diagonal.
 #### dtype : data-type, optional
 Data-type of the returned array.
 ### Returns
--------
+
 #### I : ndarray of shape (N,M)
   An array where all elements are equal to zero, except for the `k`-th
   diagonal, whose values are equal to one.
 ### See Also
---------
+
 #### identity : (almost) equivalent function
 #### diag : diagonal 2-D array from a 1-D array specified by the user.
 ### Examples
---------
+
 ```
->>> np.eye(2, dtype=int)
+np.eye(2, dtype=int)
 array([[1, 0],
        [0, 1]])
->>> np.eye(3, k=1)
+np.eye(3, k=1)
 array([[ 0.,  1.,  0.],
        [ 0.,  0.,  1.],
        [ 0.,  0.,  0.]])
@@ -631,7 +630,7 @@ empty(shape, dtype=float, order='C')
 
 Return a new array of given shape and type, without initializingentries.
 ### Parameters
-----------
+
 #### shape : int or tuple of int
 Shape of the empty array
 #### dtype : data-type, optional
@@ -641,26 +640,26 @@ Whether to store multi-dimensional data in row-major
 (C-style) or column-major (Fortran-style) order in
 memory.
 ### Returns
--------
+
 #### out : ndarray
 Array of uninitialized (arbitrary) data of the given shape, dtype,and
 order.  Object arrays will be initialized to None.
 ### See Also
---------
+
 empty_like, zeros, ones
 ### Notes
------
+
 `empty`, unlike `zeros`, does not set the array values to zero,
 and may therefore be marginally faster.  On the other hand, it requires
 the user to manually set all the values in the array, and should be
 used with caution.
 ### Examples
---------
+
 ```
->>> np.empty([2, 2])
+np.empty([2, 2])
 array([[ -9.74499359e+001,   6.69583040e-309],
        [  2.13182611e-314,   3.06959433e-309]])         #random
->>> np.empty([2, 2], dtype=int)
+np.empty([2, 2], dtype=int)
 array([[-1073741821, -1067949133],
        [  496041986,    19249760]])      
 
@@ -672,7 +671,7 @@ empty_like(a, dtype=None, order='K', subok=True)
 
 Return a new array with the same shape and type as a given array.
 ### Parameters
-----------
+
 #### a : array_like
 The shape and data-type of `a` define these same attributes of the
 returned array.
@@ -690,31 +689,31 @@ If True, then the newly created array will use the sub-class
 type of 'a', otherwise it will be a base-class array. Defaults
 to True.
 ### Returns
--------
+
 #### out : ndarray
 Array of uninitialized (arbitrary) data with the same
 shape and type as `a`.
 ### See Also
---------
+
 #### ones_like : Return an array of ones with shape and type of input.
 #### zeros_like : Return an array of zeros with shape and type of input.
 #### empty : Return a new uninitialized array.
 #### ones : Return a new array setting values to one.
 #### zeros : Return a new array setting values to zero.
 ### Notes
------
+
 This function does *not* initialize the returned array; to do that use
 `zeros_like` or `ones_like` instead.  It may be marginally faster than
 the functions that do set the array values.
 ### Examples
---------
+
 ```
->>> a = ([1,2,3], [4,5,6])                         # a is array-like
->>> np.empty_like(a)
+a = ([1,2,3], [4,5,6])                         # a is array-like
+np.empty_like(a)
 array([[-1073741821, -1073741821,           3],    #random
        [          0,           0, -1073741821]])
->>> a = np.array([[1., 2., 3.],[4.,5.,6.]])
->>> np.empty_like(a)
+a = np.array([[1., 2., 3.],[4.,5.,6.]])
+np.empty_like(a)
 array([[ -2.00000715e+000,   1.48219694e-323,  -2.00000572e+000],#random
        [  4.38791518e-305,  -2.00000715e+000,   4.17269252e-309]])
 ```
