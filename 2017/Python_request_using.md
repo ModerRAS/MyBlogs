@@ -29,3 +29,14 @@ requests.options("http://httpbin.org/get")
 payload = {'key1': 'value1', 'key2': ['value2', 'value3']}
 r = requests.get('http://httpbin.org/get', params=payload)
 ```
+### Change Header
+```
+url = 'https://api.github.com/some/endpoint'
+headers = {'user-agent': 'my-app/0.0.1'}
+r = requests.get(url, headers=headers)
+```
+### In fact I just need
+```
+r = requests.get('https://www.github.com/')
+r.text
+```
