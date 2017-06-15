@@ -1,5 +1,5 @@
 # Writing At First
-Because some website may ban ip if it do get very quickly or get big data flow for a long time.
+Because some website may ban ip if it do get very quickly or get big data flow for a long time. So mant times we will use proxy.
 # How to use agent in the requests
 ## Without proxies
 ```
