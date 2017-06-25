@@ -14,10 +14,10 @@
 # 关于整体配色
 一般设计PPT的时候不要用太多的颜色,那样容易显得整个PPT太花,而且不好看.个人感觉三四种颜色就可以了,虽然我自己做的时候都是一个颜色到底的吧.
 
-另外就是色环理论.
+另外就是选择配色的几种规则,色环理论.
 
-![](../img/色环.jpg)
-![](../img/色环2.jpg)
+![](http://softlab.sdut.edu.cn/blog/yinjunbo/wp-content/uploads/sites/16/2017/06/色环.jpg)
+![](http://softlab.sdut.edu.cn/blog/yinjunbo/wp-content/uploads/sites/16/2017/06/色环2.jpg)
 
 ## 互补色
 想要吸引眼球就要用互补色.也就是用色环中对角上的颜色,一般也就是红色对应蓝色或者绿色,这样的之类.但是这样会很刺眼,所以一般都是降低纯度之后的互补色.
@@ -25,16 +25,16 @@
 ## 同类色
 想要让人感觉比较柔和就用同类色,这个应该很好解释的,就是色环上的临近的颜色.这样让人感觉色彩会很柔和的.让人看起来很舒服.
 
-![](../img/同类色_例子.jpg)
+![](http://softlab.sdut.edu.cn/blog/yinjunbo/wp-content/uploads/sites/16/2017/06/同类色_例子.jpg)
 
 ## 三色系
 这种我没怎么看懂,贴一张图说下好了.
 
-![](../img/三色系_玉米.jpg)
+![](http://softlab.sdut.edu.cn/blog/yinjunbo/wp-content/uploads/sites/16/2017/06/三色系_玉米.jpg)
 
 ## 单色系（黑白+一种其他颜色）
 这种配色说白了就是三个颜色,其中一黑一白一随意.我感觉苹果官网算是一个吧,还有一些其他的应该还有更好看的.
-![](../img/苹果2.jpg)
+![](http://softlab.sdut.edu.cn/blog/yinjunbo/wp-content/uploads/sites/16/2017/06/苹果2.jpg)
 
 还有好多种配色方式,以后慢慢说吧,毕竟这东西还是很专业的.
 
