@@ -1,2 +1,2 @@
 # MyBlogs
-In order to back up my blogs..
+In order to back up my blogs.
