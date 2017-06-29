@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>英语读写翻译</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(238, 255, 255); overflow: auto; background-color: rgb(38, 50, 56); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(156, 255, 255); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(0, 150, 136); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(156, 255, 255); border-color: rgb(71, 93, 105); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(71, 93, 105); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(71, 93, 105); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(54, 72, 80); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(46, 61, 68); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(71, 93, 105) rgb(71, 93, 105) rgb(59, 77, 86); background-color: rgb(54, 72, 80); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview code { text-shadow: none; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+pre.editor-colors {
+  background-color: #263238;
+  color: #EEFFFF;
+}
+pre.editor-colors .wrap-guide {
+  background-color: #2b3940;
+}
+pre.editor-colors .indent-guide {
+  color: #2b3940;
+}
+pre.editor-colors .invisible-character {
+  color: #373b41;
+}
+pre.editor-colors .cursor-line {
+  background-color: #212b30;
+}
+pre.editor-colors .gutter {
+  background-color: #263238;
+  color: rgba(238, 255, 255, 0.2);
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  background-color: #212b30;
+  color: rgba(238, 255, 255, 0.2);
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  color: rgba(238, 255, 255, 0.2);
+}
+pre.editor-colors .fold-marker:after,
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after {
+  color: #B2CCD6;
+}
+pre.editor-colors .invisible {
+  color: #EEFFFF;
+}
+pre.editor-colors .cursor {
+  color: #009688;
+  border-width: 2px;
+}
+pre.editor-colors .selection .region {
+  background-color: #3b4d56;
+}
+pre.editor-colors .search-results .syntax--marker .region {
+  background-color: transparent;
+  border: 1px solid #B2CCD6;
+}
+pre.editor-colors .search-results .syntax--marker.current-result .region {
+  border: 1px solid white;
+}
+.syntax--comment {
+  color: #4f6875;
+}
+.syntax--keyword {
+  color: #C792EA;
+}
+.syntax--keyword.syntax--control {
+  color: #C792EA;
+}
+.syntax--keyword.syntax--control.syntax--elements {
+  color: #B2CCD6;
+}
+.syntax--keyword.syntax--operator {
+  color: #89DDF3;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #82AAFF;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #FFCB6B;
+}
+.syntax--storage {
+  color: #C792EA;
+}
+.syntax--constant {
+  color: #F07178;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #89DDF3;
+}
+.syntax--constant.syntax--numeric {
+  color: #F78C6A;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #89DDF3;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #C3E88D;
+}
+.syntax--constant.syntax--language.syntax--null {
+  color: #FF5370;
+}
+.syntax--variable {
+  color: #EEFFFF;
+}
+.syntax--variable.syntax--interpolation {
+  color: #eb434c;
+}
+.syntax--variable.syntax--parameter.syntax--function {
+  color: #F78C6A;
+}
+.syntax--variable.syntax--language {
+  color: #FF5370;
+}
+.syntax--variable.syntax--variable.syntax--object {
+  color: #FFCB6B;
+}
+.syntax--invalid.syntax--illegal {
+  background-color: #F07178;
+  color: #263238;
+}
+.syntax--string {
+  color: #C3E88D;
+}
+.syntax--string.syntax--regexp {
+  color: #89DDF3;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #FFCB6B;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #F07178;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #4f6875;
+}
+.syntax--punctuation.syntax--definition.syntax--array,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--string,
+.syntax--punctuation.syntax--definition.syntax--variable {
+  color: #EEFFFF;
+}
+.syntax--punctuation.syntax--definition.syntax--array.syntax--begin,
+.syntax--punctuation.syntax--definition.syntax--parameters.syntax--begin,
+.syntax--punctuation.syntax--definition.syntax--string.syntax--begin,
+.syntax--punctuation.syntax--definition.syntax--variable.syntax--begin,
+.syntax--punctuation.syntax--definition.syntax--array.syntax--end,
+.syntax--punctuation.syntax--definition.syntax--parameters.syntax--end,
+.syntax--punctuation.syntax--definition.syntax--string.syntax--end,
+.syntax--punctuation.syntax--definition.syntax--variable.syntax--end {
+  color: #89DDF3;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #82AAFF;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #FFE082;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #C792EA;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--definition.syntax--entity {
+  color: #89DDF3;
+}
+.syntax--punctuation.syntax--section.syntax--array {
+  color: #89DDF3;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #89DDF3;
+}
+.syntax--punctuation.syntax--separator.syntax--key-value {
+  color: #89DDF3;
+}
+.syntax--punctuation.syntax--terminator {
+  color: #89DDF3;
+}
+.syntax--support.syntax--class {
+  color: #FFCB6B;
+}
+.syntax--support.syntax--function {
+  color: #82AAFF;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #82AAFF;
+}
+.syntax--support.syntax--type {
+  color: #FFCB6B;
+}
+.syntax--support.syntax--variable.syntax--dom {
+  color: #FFCB6B;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #82AAFF;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #EEFFFF;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #C3E88D;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--pseudo-element {
+  color: #C792EA;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--attribute {
+  color: #C792EA;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #FFCB6B;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #82AAFF;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #F07178;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #FFCB6B;
+}
+.syntax--meta.syntax--class {
+  color: #FFE082;
+}
+.syntax--meta.syntax--delimiter.syntax--period {
+  color: #89DDF3;
+}
+.syntax--meta.syntax--link {
+  color: #FFCB6B;
+}
+.syntax--meta.syntax--require {
+  color: #82AAFF;
+}
+.syntax--meta.syntax--selector {
+  color: #C792EA;
+}
+.syntax--meta.syntax--separator {
+  background-color: #373b41;
+  color: #EEFFFF;
+}
+.syntax--meta.syntax--brace.syntax--round,
+.syntax--meta.syntax--brace.syntax--square {
+  color: #89DDF3;
+}
+.syntax--none {
+  color: #EEFFFF;
+}
+.syntax--markup.syntax--bold {
+  color: #FFCB6B;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #C792EA;
+}
+.syntax--markup.syntax--deleted {
+  color: #F07178;
+}
+.syntax--markup.syntax--italic {
+  color: #C792EA;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #82AAFF;
+}
+.syntax--markup.syntax--inserted {
+  color: #C3E88D;
+}
+.syntax--markup.syntax--list {
+  color: #F07178;
+}
+.syntax--markup.syntax--quote {
+  color: #FFCB6B;
+}
+.syntax--markup.syntax--raw.syntax--inline {
+  color: #C3E88D;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--markup.syntax--heading {
+  color: #C3E88D;
+}
+pre.editor-colors[mini] .scroll-view {
+  padding-left: 1px;
+}
+pre.editor-colors .highlight .region.bracket-matcher {
+  z-index: inherit;
+}
+.bracket-matcher .region {
+  border-bottom: 1px solid #009688;
+  box-sizing: border-box;
+  background-color: rgba(238, 255, 255, 0.1);
+  box-shadow: inset 0 -1px 0 #009688;
+}
+pre.editor-colors .spell-check-misspelling .region {
+  z-index: auto;
+}
+.syntax--jsx.syntax--component {
+  color: #F07178;
+}
+pre.editor-colors .syntax--source.syntax--js.syntax--jsx .syntax--jsx .syntax--entity.syntax--other.syntax--attribute-name {
+  font-style: normal;
+}
+.syntax--css .syntax--support.syntax--constant {
+  color: #89DDF3;
+}
+.syntax--css .syntax--support.syntax--property-name {
+  color: #73d1c8;
+}
+.syntax--css .syntax--keyword.syntax--unit {
+  color: #F78C6A;
+}
+.syntax--css .syntax--constant.syntax--numeric {
+  color: #FFE082;
+}
+.syntax--css .syntax--constant.syntax--color {
+  color: #FFE082;
+}
+.syntax--css .syntax--constant.syntax--color .syntax--punctuation {
+  color: currentColor;
+}
+.syntax--css .syntax--entity.syntax--tag {
+  color: #B2CCD6;
+}
+.syntax--css .syntax--entity.syntax--id {
+  color: #C792EA;
+}
+.syntax--css .syntax--punctuation.syntax--delimiter {
+  color: #89DDF3;
+}
+.syntax--css .syntax--punctuation.syntax--delimiter + .syntax--constant.syntax--numeric:not(.syntax--color) {
+  color: #F78C6A;
+}
+[data-grammar*="gfm"] .syntax--markup.syntax--underline.syntax--link {
+  color: #ff869a;
+}
+[data-grammar*="gfm"] .syntax--markup.syntax--underline.syntax--link span.syntax--punctuation {
+  color: #FF5370;
+}
+[data-grammar*="gfm"] .syntax--markup.syntax--strike {
+  position: relative;
+  color: rgba(238, 255, 255, 0.5);
+}
+[data-grammar*="gfm"] .syntax--markup.syntax--strike::after {
+  content: "";
+  position: absolute;
+  top: calc(54%);
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(238, 255, 255, 0.5);
+}
+[data-grammar*="gfm"] .syntax--table .syntax--border {
+  color: rgba(238, 255, 255, 0.5);
+}
+[data-grammar*="gfm"] .syntax--markup.syntax--heading {
+  color: #82AAFF;
+}
+[data-grammar*="gfm"] .syntax--punctuation.syntax--definition.syntax--begin,
+[data-grammar*="gfm"] .syntax--punctuation.syntax--definition.syntax--end {
+  color: #82AAFF;
+}
+[data-grammar*="gfm"] .syntax--punctuation.syntax--definition.syntax--begin + span:not(.syntax--function.syntax--parameter) {
+  color: #9cbbff;
+}
+.syntax--html .syntax--meta.syntax--tag.syntax--doctype,
+.syntax--jsx .syntax--meta.syntax--tag.syntax--doctype {
+  color: #C792EA;
+}
+.syntax--html .syntax--punctuation.syntax--tag,
+.syntax--jsx .syntax--punctuation.syntax--tag {
+  color: #89DDF3;
+}
+.syntax--js .syntax--constant {
+  color: #EEFFFF;
+}
+.syntax--js .syntax--support.syntax--variable.syntax--property {
+  color: #EEFFFF;
+}
+.syntax--js .syntax--support.syntax--variable.syntax--property.syntax--dom {
+  color: #82AAFF;
+}
+.syntax--js .syntax--entity.syntax--name.syntax--type {
+  color: #FFCB6B;
+}
+.syntax--js .syntax--variable.syntax--property {
+  color: #82AAFF;
+}
+.syntax--js .syntax--variable.syntax--other.syntax--object {
+  color: #EEFFFF;
+}
+.syntax--js .syntax--variable.syntax--other.syntax--object.syntax--property {
+  color: #82AAFF;
+}
+.syntax--js .syntax--string.syntax--quoted.syntax--template .syntax--other.syntax--object.syntax--property {
+  color: #C3E88D;
+}
+.syntax--js .syntax--constant.syntax--numeric {
+  color: #F78C6A;
+}
+.syntax--js .syntax--constant.syntax--boolean {
+  color: #F07178;
+}
+.syntax--js .syntax--punctuation.syntax--begin,
+.syntax--js .syntax--punctuation.syntax--end,
+.syntax--js .syntax--delimiter.syntax--object.syntax--comma,
+.syntax--js .syntax--brace.syntax--curly {
+  color: #89DDF3;
+}
+.syntax--js .syntax--export .syntax--variable.syntax--default {
+  color: #C792EA;
+}
+.syntax--json .syntax--meta.syntax--array.syntax--structure .syntax--string.syntax--quoted.syntax--double {
+  color: #C3E88D;
+}
+.syntax--json .syntax--meta.syntax--array.syntax--structure .syntax--string.syntax--quoted.syntax--double > * {
+  color: currentColor;
+}
+.syntax--json .syntax--meta.syntax--array.syntax--structure .syntax--string.syntax--quoted.syntax--double > *.syntax--punctuation.syntax--begin,
+.syntax--json .syntax--meta.syntax--array.syntax--structure .syntax--string.syntax--quoted.syntax--double > *.syntax--punctuation.syntax--end {
+  color: #89DDF3;
+}
+.syntax--json .syntax--meta .syntax--punctuation.syntax--separator.syntax--key-value + .syntax--string.syntax--quoted {
+  color: #C3E88D;
+}
+.syntax--json .syntax--meta .syntax--punctuation.syntax--separator.syntax--key-value + .syntax--string.syntax--quoted * {
+  color: currentColor;
+}
+.syntax--json .syntax--meta .syntax--punctuation.syntax--separator.syntax--key-value + .syntax--string.syntax--quoted *.syntax--punctuation.syntax--begin,
+.syntax--json .syntax--meta .syntax--punctuation.syntax--separator.syntax--key-value + .syntax--string.syntax--quoted *.syntax--punctuation.syntax--end {
+  color: #89DDF3;
+}
+.syntax--json .syntax--meta.syntax--structure.syntax--dictionary .syntax--string.syntax--quoted {
+  color: #C792EA;
+}
+.syntax--json .syntax--meta.syntax--structure.syntax--dictionary .syntax--string.syntax--quoted .syntax--punctuation.syntax--string {
+  color: currentColor;
+}
+.syntax--php .syntax--keyword.syntax--operator.syntax--assignment {
+  color: #C792EA;
+}
+.syntax--php .syntax--meta.syntax--object {
+  color: #82AAFF;
+}
+.syntax--php .syntax--meta.syntax--arguments {
+  color: #C792EA;
+}
+.syntax--python .syntax--meta.syntax--function-call {
+  color: #82AAFF;
+}
+.syntax--python .syntax--meta.syntax--function-call .syntax--punctuation {
+  color: #89DDF3;
+}
+.syntax--python .syntax--meta.syntax--function-call .syntax--arguments {
+  color: #7986CB;
+}
+.syntax--python .syntax--meta.syntax--function-call .syntax--arguments.syntax--punctuation {
+  color: #89DDF3;
+}
+.syntax--python .syntax--variable.syntax--self {
+  color: #FF5370;
+}
+.syntax--python .syntax--meta .syntax--punctuation.syntax--inheritance,
+.syntax--python .syntax--meta .syntax--punctuation.syntax--section {
+  color: #89DDF3;
+}
+.syntax--python .syntax--variable.syntax--parameter {
+  color: #89DDF3;
+}
+.syntax--python .syntax--keyword.syntax--operator {
+  color: #C792EA;
+}
+.syntax--ruby .syntax--punctuation.syntax--separator {
+  color: #89DDF3;
+}
+.syntax--ruby .syntax--variable.syntax--block {
+  color: #F07178;
+}
+.syntax--ruby .syntax--variable.syntax--instance {
+  color: #F07178;
+}
+.syntax--ruby .syntax--variable.syntax--instance .syntax--punctuation {
+  color: currentColor;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="unit-1">Unit 1</h1>
+<ol>
+<li><p>On university campuses in Europe, mass socialist or communist movements gave rise to increasingly violent clashes between the establishment and the college students, with their new and passionate commitment to freedom and justice.  </p>
+<p> 在欧洲的大学校园里，大学生以新的姿态和激情地投入到自由和正义的事业中去，大规模的社会主义或共产主义运动引发了他们与当权者之间日益升级的暴力冲突。  </p>
+</li>
+<li><p>These days political, social and creative awakening seems to happen not because of college, but in spite of it. Of course, it’s true that higher education is still important. For example, in the UK, Prime Minister Blair was close to achieving his aim of getting 50 per cent of all under thirties into college by 2010 (even though a cynic would say that this was to keep them off the unemployment statistics).  </p>
+<p> 现在，政治、社会和创造意识的觉醒似乎不是凭借大学的助力，而是冲破其阻力才发生的。当然，一点不假，高等教育仍然重要。例如，在英国，布莱尔首相几乎实现了到2010 年让50％的30 岁以下的人上大学的目标，（即使愤世嫉俗的人会说，这是要把他们排除在失业统计数据之外）。</p>
+</li>
+<li><p>I never hoped to understand the nature of my generation or how American colleges are changing by going to Lit Theory classes. This is the class where you look cool, a bit sleepy from too many late nights and wearing a T-shirt with some ironic comment such as ―Been there, done that and yes, this IS the T-shirt‖.  </p>
+<p> 我从没指望通过上文学理论课来了解我这一代人的特征，或了解美国大学是如何在变化的。这门课是让你在课堂上扮酷的——带着一丝熬夜太多的困劲儿，穿着一件T 恤衫，上面印着―去过那儿，干过那事儿，对，这就是那件T 恤衫‖，或诸如此类带有讥讽意味的俏皮话。  </p>
+</li>
+<li><p>We’re a generation that comes from what has been called the short century (1914－1989), at the end of a century of war and revolution which changed civilizations, overthrew repressive governments, and left us with extraordinary opportunities and privilege, more than any generation before.  </p>
+<p> 我们这一代人来自所谓的短世纪（1914－1989），生于其末尾。这个世纪充满了战争和革命，它改变了人类文明，推翻了强权政府，给我们留下了非同寻常的机会和特权，我们所得到的机会与特权比从前任何一代人都要多。  </p>
+</li>
+<li><p>政府采取的一系列措施不但没有化解矛盾，反倒激起更多的暴力冲突。反对党联合工会发动了一次大罢工，最终导致政府的垮台。( give rise to; form an alliance with; launch; bring about)</p>
+<p> Instead of resolving contradictions, the series of measures taken by the government gave rise to more violent clashes. The Opposition formed an alliance with the trade unions and launched a general strike, which ultimately brought about the downfall of the government.  </p>
+</li>
+<li><p>如今，大学与现实世界的距离越来越小，学生也变得越来越实际。从前，大学是一象牙塔，学者追求的是学问本身而不是把学问作为达到目的的手段，但这样的时代已经一去不复返了。(shrink; gone are the days; a means to an end)  </p>
+<p> Nowadays, the gap between the university and the real world is shrinking and the students are becoming more and more practical. Gone are the days when the university was an ivory tower in which scholars pursued knowledge as an end rather than a means to an end.  </p>
+</li>
+<li><p>我从未指望靠上课来学好这门课。但我确实去听课，因为在课上我能了解这门课的重点， 学会如何组织材料、如何推理。(hope; by doing …; the place where)  </p>
+<p> I never hoped to learn the subject well by attending those lectures. But I did go to lectures, for it was the place where I could get the important points of the course and learn how to organize materials and how to reason.  </p>
+</li>
+<li><p>我一直想方设法解决这个难题，但就是找不到满意的答案。可是当我去厨房喝饮料的时候，我突然间灵机一动，意识到解决问题的方法实际上可能很简单。( work out; click)  </p>
+<p> Although I have been trying every means to solve the problem, I cannot work out a satisfactory solution. But when I went to the kitchen to get a drink, something clicked and made me realize that the solution might be quite simple.</p>
+</li>
+</ol>
+<h1 id="unit-3">Unit 3</h1>
+<ol>
+<li><p>That was the strapline of the 2002 film Catch Me if You Can, which tells the story of Frank Abagnale, Jr. (Leonardo DiCaprio), a brilliant young master of deception who at different times impersonated a doctor, a lawyer, and an airplane pilot, forging checks worth more than six million dollars in 26 countries. He became the youngest man to ever make the FBI’s most-wanted list for forgery.   </p>
+<p> 这是2002 年的电影《有种来抓我》的剧情简介。影片讲述了弗兰克·小阿巴格纳尔（列奥纳多·迪卡普里欧饰演）的故事，影片的主人公是一位聪明绝顶的年轻骗术大师，曾在不同时间扮演医生、律师和飞行员的角色，在26 个国家伪造了价值六百万美元以上的支票。他成了联邦调查局伪造罪头号通缉令名单上最年轻的人。  </p>
+</li>
+<li><p>Since 2003, identity theft has become increasingly common. Few people could imagine how important things like taking mail to the post office and not leaving it in the mailbox for pickup, shredding documents instead of throwing them out with the trash, even using a pen costing a couple of bucks, have become to avoid life-changing crimes.   </p>
+<p> 2003 年以来，身份盗窃案变得越来越常见。很少有人会想象到，为了防止改变人生的犯罪，像把邮件拿到邮局去寄而不是丢在信箱里等人来取、把文件切碎而不是把它们连同垃圾一道扔出去，甚至使用价值一两块美元的笔之类的事情已经变得多么重要。  </p>
+</li>
+<li><p>If we’ve learned one thing from terrorists, not to mention action movies, it’s that a tool is also a weapon. Globally accepted credit cards and the databases that support them are tools for taking the friction out of commerce. That’s another way of saying that they’re tools for extracting money from people with minimum effort on everyone’s part.   </p>
+<p> 假如说我们从恐怖分子那里——更不用说从动作电影那里——学到了一招，那就是，工具也是武器。全球通用的信用卡和支持它们的数据库是去除商业摩擦的工具。换句话说，它们是以让各方最省事的方式从人们那里取钱的工具。  </p>
+</li>
+<li><p>Wherever universal identification leads, we don’t yet know how to manage a world in which everything can be linked to me, wherever I am. We don’t know yet how to balance the undoubted convenience of this world with the peril—vague, but apparently near—that we sense in the presence of all that information combined and consolidated, if only logically.   </p>
+<p> 无论通用身份的前景如何，我们尚不知道该如何应付这样一个世界：在其中，无论我身在何处，一切都可能与我有关联。我们尚不知道该如何在这世界给予我们的无可置疑的方便和我们在面对一切组合、强化了的（要是合理的话那该多好啊）信息时所感到的危险之间保持平衡。这危险模糊，但显然很近。  </p>
+</li>
+<li><p>这些文件很重要，内容要绝对保密。如果要处理掉的话，应先把它们切碎，而不是直接当垃圾扔掉。 (content of which; tear up; instead of)  </p>
+<p>These are important documents, the content of which should be kept strictly confidential. If you need to dispose them, you must shred them instead of throwing them out with the trash.  </p>
+</li>
+<li><p>现在，像伪造支票、身份证和信用卡这类的白领犯罪已变得相当普遍。尽管我们学会了许多防止被骗的招数，可是看起来我们随时都可能被骗。( forge; prevent…from)  </p>
+<p> Nowadays, white-collar crimes such as forging checks, ID cards and credit cards have become very common. Though we have learnt much about how to prevent ourselves from being cheated, it seems that we could be its victims at any time.  </p>
+</li>
+<li><p>地震已过去了好几个月，生活恢复了正常。人们与平时一样忙着各自的事情。但一个无法回避的事实是，地震给人们带来的精神创伤也许永远无法抹去。( go about; there is no escaping the fact that…; mental trauma; wipe out)  </p>
+<p> It has been several months since the earthquake. Life has returned to normal, and people are busy going about their business. But there is no escaping the fact that the mental trauma the earthquake brought to people will never be wiped out.</p>
+</li>
+<li><p>为什么说一个图书馆拥有大量可供随时阅览的新书及电子图书资源很重要呢？因为那样的话，学者们就可以了解自己学科领域里的最新进展，知道自己的研究是否有价值。 ( matter; readily available to; if so)  </p>
+<p> Why does it matter that a library has many new books and electronic resources readily available to the readers? This is because if so, the scholars know the latest development in their own fields and know whether their research is valuable.</p>
+</li>
+</ol>
+<h1 id="unit-4">Unit 4</h1>
+<ol>
+<li><p>The objective importance of an event is obviously not enough – there are plenty of enormous global issues out there, with dramatic consequences, from poverty to global warming – but since they are ongoing, they don’t all make the headlines on the same day. 9/11, in contrast, was not just international, but odd, unexpected, and (in the sense that it was possible to identify with the plight of people caught up in the drama) very human.   </p>
+<p> 一个事件光有客观重要性显然不够——世界上有大量全球性的大问题，都会造成戏剧性的后果，从贫困到全球变暖——但由于它们都是进行中的，并不都集中在同一天上头条。对比之下，9/11不仅具有国际性，而且奇特怪异、出人意料，还（可能使读者对身陷那场悲剧中的人们的困境感同身受，从这个意义上讲）极具人性。  </p>
+</li>
+<li><p>But TV news is not necessarily more objective or reliable than a newspaper report, since the images you are looking at on your screen have been chosen by journalists or editors with specific objectives, or at least following set guidelines, and they are shown from a unique viewpoint. By placing the camera somewhere else you would get a different picture.  </p>
+<p> 但是，电视新闻未必比报纸报道更客观或更可靠，因为你在屏幕上看到的图像是经记者或编辑根据特殊的目的，或至少是按照预定指示筛选过的；它们是从一个独特的视点展现给观众的。如果把相机移到别的地方，你就会看到另一番景象。  </p>
+</li>
+<li><p>The Internet provides an easy outlet for anyone with an opinion, and there’s nothing a newspaper editor likes more for reassurance about their work than feedback and opinions, as diverse as possible. Teenagers today don’t remember a time when they didn’t have the Internet, and reading a newspaper is something they only do if they have an assignment to write about the specific medium of print journalism.</p>
+<p> 互联网为任何有意见的人提供了一个便利的窗口；报纸编辑最喜欢的莫过于给他们提供各种不同的反馈和意见，他们能从中得到安慰。如今十几岁的少年已不记得过过没有互联网的日子了；只有在写关于印刷新闻这一特定媒体的作业时他们才去读报。  </p>
+</li>
+<li><p>So maybe the newspaper won’t die without a struggle. Trends for the future of newspaper include an increased demand for local news, and the continued exploitation of lifestyle journalism, which began in the late 1980s, especially within personal finance and travel, will create new revenue streams.  </p>
+<p> 如此看来，报纸是不会轻易消失的。将来报纸发展的趋势包括对本地新闻需求的日益增长，而始于20世纪80年代晚期的对生活方式新闻的持续开发利用——尤其在个人理财和旅游方面——将会创造新的收入来源。  </p>
+</li>
+<li><p>这个消息来得如此突然、如此令人震惊，我在沙发上呆呆地坐了几分钟。我的第一本能就是赶紧打电话把这件事告诉领导，看看我们能为那些在这起交通事故中死伤的同事做些什么。(so… that; first instinct)  </p>
+<p> So sudden, so striking was the news that I sat motionless on sofa for a few minutes. My first instinct was to call our leaders to tell them what had happened and see what we can do for those colleagues who died or got injured in this traffic accident.  </p>
+</li>
+<li><p>纸版的儿童书与电子书相比有很大的优势。对孩子们来说，一本印刷精美的纸版书不仅是一本书也是一个玩具。读纸版书的感觉与在屏幕上读书的感觉是很不同的。( have advantage over; be different from)  </p>
+<p> Paper books for children have an enormous advantage over e-books. For children, a beautifully printed paper book is not only a book but also a toy they can play with. Reading a paper book is rather different from reading a book on the screen.  </p>
+</li>
+<li><p>近年来在西方国家，传统媒体呈现出衰退的趋势，新媒体迅速发展。然而新媒体的收入又不足以弥补传统媒体丢失的市场份额。（ in the tendency of; not necessarily; when it comes to）  </p>
+<p> In recent years, traditional media in the western countries are in the tendency of decline and new media are developing rapidly. However, this does not necessarily mean that tradition media have lost the market. When it comes to reading things like news, people are still used to such traditional media as newspaper.</p>
+</li>
+<li><p>随着金融危机的爆发，许多企业陷入了困境。对于那些因缺乏流动资金无法进行再生产又不想让恶性循环继续下去的企业，他们唯一能做的事情就是向政府求助。( find oneself in difficulty; turn to )</p>
+<p> With the explosion of the financial crisis, many enterprises find themselves in difficulties. For those who have no circulating fund to invest on new production and would not let the vicious circle continue, the only thing they can do is to turn to government for help.</p>
+</li>
+</ol>
+<h1 id="unit-8">Unit 8</h1>
+<ol>
+<li><p>As for the unfortunate people who can command everything they want, who can gratify every caprice and lay their hands on almost every object of desire- for them a new pleasure, a new excitement is only an additional satiation. In vain they rush frantically round from place to place, trying to escape from avenging boredom by mere clatter and motion.  </p>
+<p> 那些能够支配一切、肆意妄为、染指一切追求目标的人是不幸的。对于他们而言，多一种新的乐趣、多一种新的刺激只是增加一份厌腻而已。他们到处乱跑，企图靠喧闹骚动来摆脱无聊对他们的报复，但这么做是徒劳的。  </p>
+</li>
+<li><p>They have their compensations. The long hours in the office or the factory bring with them as their reward, not only the means of sustenance, but a keen appetite for pleasure even in its simplest and most modest forms. But fortune’s favored children belong to the second class. Their life is a natural harmony.</p>
+<p> 他们是能够得到补偿的。在办公室或工厂里长时间工作给他们带来了报酬。这不仅是谋生的手段，也使他们对寻找快乐充满了渴望，哪怕是最简单、最朴素的快乐。但是，幸运之神偏爱的是第二种人。他们的生活是一种自然的和谐。  </p>
+</li>
+<li><p>Of course, for the true coach potato, there are inherent risks. Perhaps the greatest of these results from the lack of exercise, and is referred to by professional coach potatoes as telly belly. Some, however, see their telly belly as a mark of dedication to their leisure inactivity, and wear it proudly over the top of their trousers.  </p>
+<p> 当然，对于真正的沙发土豆来说，固有的危险还是有的。也许最大的危险来自于缺乏锻炼，其后果被专业沙发土豆称为电视肚。然而，有些人则是自己的电视肚为专注于闲暇无为的标志，骄傲地把它系在裤腰上。  </p>
+</li>
+<li><p>In fact, leaving the computer not only seems pointless but also risks a threat by some rival mouse potato in brighter time zone across the world. For time off, they usually perform extensive Internet searches or participate in online chat rooms, leaving ill-informed and badly spelt opinions around the virtual world, and generally insulting one’s intelligence.</p>
+<p> 事实上，离开电脑不仅毫无意义，而且会是你收到世界上较亮时区的鼠标土豆对手的威胁。休息时间，他们通常广泛搜索互联网或加入在线聊天室，在虚拟世界到处留下缺乏见识和拼写拙劣的意见，一般来说也是对人家智力的侮辱。 </p>
+</li>
+<li><p>整天把自己埋在书本里是没有用的。要培养一些业余爱好，每隔一段时间参加一些体育锻炼或课外活动。劳逸结合才是健康的学习习惯。( it’s no use doing sth; take up; at intervals; extracurricular activities)  </p>
+<p> It’s no use burying yourselves in books all day. You’d better take up some hobbies and take part in sports or extracurricular activities at intervals. A healthy study habit is to keep a balance between work and rest.  </p>
+</li>
+<li><p>工作选对了，不但是可以维持生计的手段，还来可以帮你摆脱无聊，是你不用担心接受了多年的高等教育之后会虚度人生。(a means of sustenance; banish sth from one’s mind)  </p>
+<p> If your job is rightly chosen, it will not only give you a means of sustenance, but also help escape from the boredom and banish from you mind the worry about learning a meaningless life after so many years of higher education.  </p>
+</li>
+<li><p>手头没有事情可做时，他常常主动帮助社区做些义务劳动。很有可能是受到他的影响，社区里越来越多的人加入到了志愿者的行列。(at hand; it may well be that)  </p>
+<p> When he had nothing to do at hand, he used to do volunteer to do something for his community. It may well be that under his influence more and more people in the community joined in to become volunteers.  </p>
+</li>
+<li><p>我以前看电视连续剧常常看到深夜，这太费时间，还影响我的健康和体型。为了避免诱惑，我把电视机搬出了我的屋子，开始从事别的休闲活动，比如读书、弹钢琴。(risk; take up)  </p>
+<p> I used to watch TV series late into the night, which took up too much time and risked my health and shape. To avoid temptation, I removed the TV set from my room and took up other leisure activities such as reading and playing piano.</p>
+</li>
+</ol></body>
+</html>
