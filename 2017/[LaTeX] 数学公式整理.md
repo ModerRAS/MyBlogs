@@ -4799,5 +4799,3 @@ f(x,y,z) &amp; = &amp; x + y + z
 </tbody></table>
 
 <p>您可以使用 <code>\left</code> 和 <code>\right</code> 来显示不同的括号：</p>
-
-<p></p>
