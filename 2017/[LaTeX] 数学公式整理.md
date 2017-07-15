@@ -3,6 +3,7 @@
 # LaTeX数学公式
 
 来自[维基百科](https://zh.wikipedia.org/wiki/Help:%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F)
+
 所以本文遵循CC-BY-SA 3.0协议.
 ## 希腊字母
 
